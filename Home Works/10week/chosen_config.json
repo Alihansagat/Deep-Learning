@@ -1,0 +1,8 @@
+{
+  "recipe": "fix_a",
+  "autocontrast_cutoff": 2,
+  "threshold": 145,
+  "validation_cer": 0.42021276595744683,
+  "validation_exact_n": 12,
+  "frozen_at": "2026-11-07T02:56:20"
+}

@@ -1,0 +1,14 @@
+{
+  "type": "synthetic teaching data",
+  "base_label_count": 12,
+  "image_count": 48,
+  "generator": "Pillow; Arial Bold 46 px; 520 by 180 RGB canvas",
+  "conditions": {
+    "clean": "black text on white background",
+    "blur": "resize to 156 by 54, bicubic upscale, Gaussian radius 1.7",
+    "rotation": "12 degree in-plane rotation, fixed canvas with white fill",
+    "shadow": "smooth spatial gray background and reduced stroke contrast"
+  },
+  "limitations": "single font, one script, no real scene, no detection boxes; small supports",
+  "reproducibility": "supplied PNGs are authoritative; no random augmentation is applied at run time"
+}
