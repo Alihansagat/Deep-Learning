@@ -1,0 +1,47 @@
+{
+  "test_examples_total": 6413,
+  "test_errors_total": 1158,
+  "analysis_mode": "misclassifications",
+  "selected_cases": [
+    {
+      "image": "20150708_1300_40.jpg",
+      "true_label": "busy",
+      "predicted_label": "free",
+      "confidence": 0.5021777749061584,
+      "prob_busy": 0.49782222509384155,
+      "prob_free": 0.5021777749061584,
+      "correct": false,
+      "camera": "B",
+      "date": "20150708",
+      "time": "1300",
+      "analysis_note": "False-free prediction: foliage, shadows, or partial vehicle occlusion can hide the occupied-space cues in this crop."
+    },
+    {
+      "image": "20150708_1410_46.jpg",
+      "true_label": "busy",
+      "predicted_label": "free",
+      "confidence": 0.5027782320976257,
+      "prob_busy": 0.49722185730934143,
+      "prob_free": 0.5027782320976257,
+      "correct": false,
+      "camera": "B",
+      "date": "20150708",
+      "time": "1410",
+      "analysis_note": "False-free prediction: foliage, shadows, or partial vehicle occlusion can hide the occupied-space cues in this crop."
+    },
+    {
+      "image": "20150708_1755_36.jpg",
+      "true_label": "free",
+      "predicted_label": "busy",
+      "confidence": 0.5038682818412781,
+      "prob_busy": 0.5038682818412781,
+      "prob_free": 0.49613168835639954,
+      "correct": false,
+      "camera": "B",
+      "date": "20150708",
+      "time": "1755",
+      "analysis_note": "False-busy prediction: a neighboring vehicle or wheel can enter the crop even though the target space is labeled free."
+    }
+  ],
+  "next_step": "Collect or add labeled samples under the new camera/viewpoint and evaluate again using a new held-out set."
+}

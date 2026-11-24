@@ -1,0 +1,97 @@
+{
+  "task": "binary image classification of pre-cropped parking-space patches",
+  "detection_metric_note": "mAP@0.50 is not applicable: this dataset has no object bounding boxes and the model outputs one class per crop.",
+  "experiment_hypothesis": "A lower learning rate (1e-4) may improve validation generalization by making smaller updates than the 1e-3 baseline.",
+  "settings": {
+    "seed": 1409,
+    "epochs": 12,
+    "batch_size": 64,
+    "image_size": 150,
+    "optimizer": "Adam",
+    "loss": "CrossEntropyLoss",
+    "model": "SmallParkingCNN",
+    "device": "mps"
+  },
+  "runs": {
+    "baseline_lr_0.001": {
+      "learning_rate": 0.001,
+      "training_seconds": 187.31303679200937,
+      "validation_metrics": {
+        "accuracy": 1.0,
+        "precision_free": 1.0,
+        "recall_free": 1.0,
+        "f1_free": 1.0,
+        "macro_precision": 1.0,
+        "macro_recall": 1.0,
+        "macro_f1": 1.0,
+        "average_precision_free": 0.9999999999999999,
+        "confusion_matrix_labels_busy_free": [
+          [
+            730,
+            0
+          ],
+          [
+            0,
+            596
+          ]
+        ],
+        "support_busy": 730,
+        "support_free": 596
+      }
+    },
+    "experiment_lr_0.0001": {
+      "learning_rate": 0.0001,
+      "training_seconds": 182.36059937500977,
+      "validation_metrics": {
+        "accuracy": 0.9969834087481146,
+        "precision_free": 1.0,
+        "recall_free": 0.9932885906040269,
+        "f1_free": 0.9966329966329966,
+        "macro_precision": 0.9972752043596731,
+        "macro_recall": 0.9966442953020134,
+        "macro_f1": 0.9969503780979191,
+        "average_precision_free": 0.9999695941089968,
+        "confusion_matrix_labels_busy_free": [
+          [
+            730,
+            0
+          ],
+          [
+            4,
+            592
+          ]
+        ],
+        "support_busy": 730,
+        "support_free": 596
+      }
+    }
+  },
+  "selected_run_by_validation_macro_f1": "baseline_lr_0.001",
+  "held_out_test_metrics": {
+    "accuracy": 0.819429284266334,
+    "precision_free": 0.6231808731808732,
+    "recall_free": 0.7346813725490197,
+    "f1_free": 0.6743532058492688,
+    "macro_precision": 0.7633614323578681,
+    "macro_recall": 0.7915197283159238,
+    "macro_f1": 0.7747170559990681,
+    "average_precision_free": 0.7357864947812125,
+    "confusion_matrix_labels_busy_free": [
+      [
+        4056,
+        725
+      ],
+      [
+        433,
+        1199
+      ]
+    ],
+    "support_busy": 4781,
+    "support_free": 1632
+  },
+  "limitations": [
+    "Only two dates are present and each date maps to a different camera; date and viewpoint effects are confounded.",
+    "Performance on a university parking lot is unverified without images from that site.",
+    "This classification project does not satisfy the original object-detection requirement as written."
+  ]
+}
