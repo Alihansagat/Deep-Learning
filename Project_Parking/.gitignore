@@ -3,9 +3,12 @@ CNRPark-Patches-150x150/
 CNR-EXT_FULL_IMAGE_1000x750/
 CNRPark+EXT.csv
 data/
+.parking_training_tmp/
 *.zip
 .DS_Store
 __pycache__/
 *.py[cod]
 .venv/
-# Keep both run checkpoints, the selected final checkpoint, and evidence.
+yolo11n.pt
+# Downloaded pretrained weights are fetched automatically; temporary training files are ignored.
+outputs/
