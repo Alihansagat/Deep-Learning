@@ -12,3 +12,10 @@ __pycache__/
 yolo11n.pt
 # Downloaded pretrained weights are fetched automatically; temporary training files are ignored.
 outputs/
+
+experiment_checkpoints.zip
+model_metadata.json.tmp
+
+.parking_training.lock
+
+.parking_four_run/
